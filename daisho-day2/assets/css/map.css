@@ -1,0 +1,16 @@
+/* 地図は常に美しく：16:9の比率ボックス＋角丸＋シャドウ */
+.map-wrap{
+  position: relative; width: 100%; aspect-ratio: 16 / 9;
+  background: #000; border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow); margin: 10px 0 18px;
+}
+.map-wrap iframe{ position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* スポット選択ボタン：カード風 */
+.spots{ grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.spot{
+  background: var(--card); color: inherit; border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 12px 14px; cursor: pointer;
+  box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease;
+}
+.spot.active{ outline: 2px solid color-mix(in oklab, var(--brand) 45%, #fff); }

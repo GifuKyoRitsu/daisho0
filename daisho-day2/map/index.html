@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Googleマップ（複数スポット）</title>
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/map.css" />
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">おすすめスポット マップ</h1>
+    <p class="muted">ボタンを押すと地図が切り替わります。</p>
+
+    <div class="map-wrap">
+      <iframe id="gmap" src="" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <section id="spots" class="grid spots">
+      <!-- data-map に各自の埋め込みURLを貼る（1行） -->
+      <button class="spot hover-rise" data-map="https://maps.app.goo.gl/VkkVKwmBx6KRCNZr8=＜学校の埋め込みURL＞">学校周辺</button>
+      <button class="spot hover-rise" data-map="https://www.google.com/maps/embed?pb=＜駅の埋め込みURL＞">最寄り駅</button>
+      <button class="spot hover-rise" data-map="https://www.google.com/maps/embed?pb=＜観光スポットURL＞">観光スポット</button>
+    </section>
+
+    <p style="margin-top:16px"><a class="btn btn-ghost" href="../">← Day2 メニューへ戻る</a></p>
+  </main>
+
+  <script src="../assets/js/map.js"></script>
+</body>
+</html>
